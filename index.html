@@ -18,7 +18,7 @@
         
         // Events Data
         var overallData = MP.api.events('Session', 'Anti-Theft', 'Quick Antivirus Initiated', 'Quick Antivirus Results', 'App Lock', 'App Manager', {
-            from: moment().subtract(4, 'months'),
+            from: moment().subtract(3, 'months'),
             unit: 'week'
         });
         
@@ -50,7 +50,7 @@
         // Session Data
         var sessionData = {}
         var dataExported = MP.api.query('/api/2.0/segmentation/numeric/', {
-            from: moment().subtract(6, 'months'),
+            from: moment().subtract(3, 'months'),
             to: moment(),
             event: 'Session',
             on: 'properties["Duration"]',
@@ -99,7 +99,7 @@
         event = 'Session'
       
         var appInstall = MP.api.segment(event, 'Campaign Source', {
-            from: moment().subtract(6, 'months'),
+            from: moment().subtract(3, 'months'),
             unit: 'week'
         });
         
