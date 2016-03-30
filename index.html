@@ -96,7 +96,7 @@
           
           
         // App Install Event by Campaign Source
-        event = 'App Install'
+        event = 'Session'
       
         var appInstall = MP.api.segment(event, 'Campaign Source', {
             from: moment().subtract(6, 'months'),
@@ -106,7 +106,7 @@
         $.when(appInstall).done(function(appInstall) {
           var appInstallData = appInstall.values()
           
-          $('<span>' + "App Install Event by Campaign Source" + '</span>').css({
+          $('<span>' + "Session Event by Campaign Source" + '</span>').css({
             'background': 'white',
             'border': '1px solid #7a8195',
             'border-radius': '5px',
